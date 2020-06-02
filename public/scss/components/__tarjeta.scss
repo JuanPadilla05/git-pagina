@@ -1,0 +1,576 @@
+.item-banner{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    img{
+        height: 200px;
+        position: absolute;
+        right: -1%;
+        bottom: 0;
+    }
+    .description{
+        position: absolute;
+        width: 70%;
+        max-width: 350px;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        h1{
+            font-weight: 500;
+            font-size: 1.7rem ;
+            margin-bottom: 2rem;
+        }
+        h2{
+            font-family: $noto-sans;
+            font-size: 1.2rem;
+        }
+        h3{
+            font-size: 1rem;
+            font-display: $noto-sans;
+        }
+        a{
+            display: inline-block;
+            margin-top: 2rem;
+            text-decoration: none;
+            background: $blanco-humo;
+            padding: .7rem 1rem;
+            border-radius: 50px;
+            //box-shadow: 0px 5px 3px -4px rgba(0,0,0,.5);
+            font-weight: 500;
+            color: $color-texto-principal;
+            transition: all .3s;
+            &:hover{
+                transform: translateY(-.1rem);
+            }
+        }
+    }
+    @media(min-width:990px){
+        height: 420px;
+        .description{
+            max-width: 400px;
+            h1{
+                font-size: 2.5rem;
+            }
+            h2{
+                font-size: 1.7rem;
+            }
+            h3{
+                font-size: 1.3rem;
+            }
+        }
+        img{
+            width: 60%;
+            height: auto;
+        }
+    }
+}
+.item-servicio{
+    display: flex;
+    align-items: center;
+    margin: .8rem .5rem;
+    padding-right: .2em;
+    span{
+        font-size: 2rem;
+        display: block;
+        margin-right: .5em;
+    }
+    h2{
+        font-size: 1.1rem;
+    }
+    h3{
+        font-size: .8rem;
+        margin-bottom: 0;
+    }
+}
+.tarjeta{
+    position: relative;
+    overflow: hidden;
+    a{
+        display: block;
+        width: 250px;
+        position: absolute;
+        text-decoration: none;
+        top: 50%;
+        left: 5%;
+        z-index: 1;
+        transform: translateY(-50%);
+        h2{
+            font-size: 1.6rem;
+            font-family: $noto-sans;
+            margin-bottom: 2rem;
+        }
+        h6{
+            font-family: $noto-sans;
+            font-weight: 300;
+        }
+    }
+    img{
+        height: 100%;
+        position: absolute;
+        right: -1%;
+        bottom: 0;
+        z-index: 0;
+        transform: scale(1);
+        transition: all .3s ;
+    }
+    &:hover{
+        img{
+            right: 5%;
+            transform: scale(1.2);
+        }
+    }
+}
+.tarjeta-producto{
+    width: 100%;
+    padding: 1rem;
+    .tarjeta-insignia{
+        width: 50px;
+        border-radius: 4px;
+        color: $blanco;
+        font-size: small;
+        text-align: center;
+        background: $color-primario;
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        margin-left: auto;
+    }
+    .tarjeta-img{
+        width: 80%;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 1rem;
+        display: block;        
+        object-fit: contain;
+    }
+    .tarjeta-acciones{
+        padding: 1rem;
+        text-align: center;
+        a{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 0 .5rem;
+            background: $blanco-humo;
+            border: 1.5px solid rgba(0,0,0,.08);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 3;
+            color:$plomo;
+            cursor: pointer;
+
+            &:hover{
+                background: $color-primario;
+                color: $blanco;
+                border-color: $color-primario;
+            }
+        }
+    }
+    .tarjeta-caption{
+        width: 100%;
+        display: block;
+        text-align: center;
+        a{
+            font-family: $roboto;
+            color: $color-texto-principal;
+            text-decoration: none;
+            transition: all .3s;
+            &:hover{
+                color: $color-primario;
+            }
+        }
+        
+        small{
+            display: block;
+            margin-bottom: .5rem;
+            color: $plomo;
+        }
+        span{
+            display: block;
+            text-align: center;
+            margin-top: 1rem;
+            ins{
+                color: $color-primario;
+                font-weight: 600;
+                text-decoration: none;
+            }
+            del{
+                margin-left: 1rem;
+                color:$plomo;
+                font-weight: 500;
+            }
+        }
+        button{
+            margin-top: 1rem;
+        }        
+    }
+    @media(min-width:990px){
+        position: relative;
+        .tarjeta-acciones{
+            position: absolute;
+            width: 100%;
+            top: 60%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%,-50%);
+            transition: all .3s;
+        }
+        .tarjeta-caption{
+            position: relative;
+            transition: all .3s;
+            button{
+                position: absolute;
+                margin: 0;
+                bottom: -200px;
+                left: 50% ;
+                transform: translateX(-50%);
+                opacity: 0;
+            }
+            h3{
+                font-size: 1.2rem;
+            }
+        }
+        &:hover .tarjeta-acciones{
+            top:50%;
+            opacity: 1;
+        }
+        &:hover .tarjeta-caption button{
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+}
+
+.tarjeta-colaborador{
+    width: 95%;
+    margin: auto;
+    border-radius: 1rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    img{
+        display: block;
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        background: $gris;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+        object-fit: cover;
+    }
+    h3{
+        color: $color-secundario;
+        font-size: 1.5rem;
+        font-family: $noto-sans;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    h4{
+        color: rgba($color: #80809e, $alpha: 0.8);
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
+    }
+    i{
+        display: inline-block;
+        color: $blanco;
+        background: $color-primario;
+        padding: 1rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        transition: all .3s;
+        &:hover{
+            background: #000;
+        }
+    }
+}
+
+.banner{
+    position: relative;
+    height: 230px;
+    width: 100%;
+    .banner-caption{
+        position: absolute;
+        width: 75%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;        
+        h2{
+            color: $blanco;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-family: $roboto;
+        }
+    }
+    img{
+        filter: brightness(60%);
+    }
+    @media (min-width:520px) {
+        height: 300px;
+        .banner-caption{
+            max-width: 400px;
+            h2{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @media (min-width:990px) {
+        height: 400px;
+        .banner-caption{
+            max-width: 700px;
+            h2{
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+.tarjeta2{
+    width: 100%;
+    min-height: 270px;
+    padding: 1.5rem;
+    background: red;
+    color: $blanco;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    img{
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        transition: all .3s;
+        transform: scale(1.3);
+        z-index: 10;
+    }
+    .caption{
+        width: 70%;
+        height: auto;
+        max-width: 300px;
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        z-index: 20;
+        h1{
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        h2{
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        a{
+            display: inline-block;
+            color: $blanco;
+            margin-top: 1.5rem;
+            text-decoration: none;
+            position: relative;
+            font-family: $noto-sans;
+            overflow: hidden;
+            &::before{
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 3px;
+                height: 1px;
+                width: 100%;
+                background: $blanco;
+                transition: all .7s;
+            }
+    
+            &:hover {
+                &::before{
+                    right: -100%;
+                }
+            }
+        }
+    }
+    
+}
+.tarjeta-detalle{
+    article{
+        h1{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        h4{
+            color: $color-primario;
+            margin-bottom: 1rem;
+        }
+        h6{
+            color: $color-texto-principal;
+            font-weight: 400;
+            var{
+                color: $color-primario;
+                text-transform: unset;
+            }
+        }
+        p{
+            margin-top: 1.5rem;
+            color: $color-texto-principal;
+            font-size: .9rem;
+            font-family: $noto-sans;
+            padding-bottom: 1rem;
+            //border-bottom: 1px solid $gris;
+        }
+    }
+    section{
+        padding-bottom: 0;
+        label{
+            color: $color-texto-principal;
+            width: 120px;
+            font-family: $noto-sans;
+        }
+        .cantidad{
+            display: inline-flex;
+            padding: .5rem;
+            border-radius: 50px;
+            border: 1px solid $gris;
+            button,input{
+                background: none;
+                border-style: none;
+                outline: none;
+                width: 50px;
+                text-align: center;
+            }
+            button{
+                color: $plomo;
+                &:hover{
+                    color: $color-primario;
+                }
+            }
+        }
+    }
+}
+
+.card-aside{
+    border-radius: 1rem;
+    a{
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        min-height: 200px;
+        position: relative;
+        img{
+            height: 100%;
+            margin-top: -1rem;
+            transform: translateX(-30%);
+            transition: all .3s;
+            z-index: 10;
+        }
+        >div{
+            position: absolute;
+            top:0;
+            padding: 1rem;
+            width: 70%;
+            right: 0;
+            color: $blanco;
+            z-index: 20;
+        }
+        @media(min-width:990px){
+            height: auto;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &:hover{
+            img{
+                transform: translateX(-25%);
+            }
+        }
+    }
+}
+.tarjeta-top{
+    width: 100%;
+    padding-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    img{
+        width: 40%;
+        max-width: 120px;
+        height: 200px;
+        object-fit: contain;
+    }
+    .detalle{
+        margin-left: 1rem;
+        h2{
+            font-family: $noto-sans;
+            font-size: 1.2rem;
+            color: $color-secundario;
+        }
+        ins{
+            text-decoration: none;
+            color: $color-secundario;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+        small{
+            color: $gris;
+            display: block;
+            color:$amarillo;
+        }
+    }
+    &:hover{
+        text-decoration: none;
+        .detalle{
+            h2{
+                color: $color-primario;
+            }
+        }
+    }
+    @media(min-width:990px){
+        img{
+            height: 120px;
+        }
+        .detalle{
+            h2{
+                font-size: 1rem;
+            }
+        }
+    }
+}
+.tarjeta-persona{
+    width: 100%;
+    .cuerpo{
+        width: -100%;
+        background-color: rgba($color: #000, $alpha: .04);
+        padding: 3rem 2rem;
+        text-align: center;
+        font-family: $noto-sans;
+        i{
+            display: block;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: $color-primario;
+        }
+    }
+    .foto{
+        display: block;
+        width: 90px;
+        height: 90px;
+        margin: auto;
+        margin-top: -40px;
+        margin-bottom: 20px;
+        border-radius: 50%;
+    }
+    h4{
+        text-align: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    span{
+        display: block;
+        color: $plomo;
+        text-align: center;
+        font-size: .8rem;
+        padding-bottom: 3rem;
+    }
+}

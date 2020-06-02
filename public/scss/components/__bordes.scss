@@ -1,0 +1,53 @@
+.borde-blanco{
+    border-color: $blanco !important;
+}
+.borde-plomo{
+    border-color: $plomo !important;
+}
+.borde-blanco-humo{
+    border-color: $blanco-humo !important;
+}
+.borde-primario{
+    border-color: $color-primario !important;
+}
+.borde-secundario{
+    border-color: $color-secundario !important;
+}
+.borde-amarillo{
+    border-color: $amarillo !important;
+}
+.borde-rojo{
+    border-color: $rojo !important;
+}
+.borde-gris{
+    border-color: $gris !important;
+}
+.border-primario-lg{
+    border: 1.5px solid rgba($color: $color-primario, $alpha: 0.3) !important;
+}
+.borde-tema{
+    background: $color-primario;
+    height: 3px;
+    width: 130px;
+    margin-bottom: -1px;
+    transition: all .4s;
+}
+section:hover .borde-tema{
+    width: 200px;
+}
+.borde-azulado{
+    border-color: rgba(0,0,0,.08);
+}
+.rounded-1{
+    border-radius: 1rem;
+}
+
+.bg-blanco-humo{
+    background: $blanco-humo;
+}
+.bg-gris{
+    background: rgba($color:$gris,$alpha:0.1);
+}
+.bg-secundario{
+    background-color: $color-secundario;
+}

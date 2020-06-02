@@ -1,0 +1,57 @@
+.roboto{
+    font-family: $roboto;
+}
+.poppins{
+    font-family: $poppins;
+}
+.noto-sans{
+    font-family: $noto-sans;
+}
+.f-300{
+    font-weight: 300;
+}
+.f-400{
+    font-weight: 400;
+}
+.f-500{
+    font-weight: 500;
+}
+.f-700{
+    font-weight: 700;
+}
+.text-plomo{
+    color: $plomo !important;
+}
+.text-primary{
+    color: $color-primario !important;
+}
+.text-secondary{
+    color: $color-secundario !important;
+}
+.text-white-ligth{
+    color: $blanco-humo !important;
+}
+.text-danger{
+    color: $rojo !important;
+}
+.text-warning{
+    color: $amarillo !important;
+}
+.text-gris{
+    color: $gris !important;
+}
+.text-azulado{
+    color: rgba($color: #80809e, $alpha: 0.8);
+}
+.link-primary{
+    color: $plomo;
+    text-decoration: none !important;
+    transition: all .2s;
+    &:hover{
+        color:$color-primario;
+    }
+}
+
+.text{
+    color: $color-texto-principal;
+}

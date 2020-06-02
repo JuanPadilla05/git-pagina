@@ -1,0 +1,57 @@
+.main-top{
+    margin-top: 50px;
+    padding-top: 10px;
+    @media(min-width: 990px){
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+section{
+    padding:2rem 0;
+}
+
+body{
+
+    &::-webkit-scrollbar{
+        width: 8px;     
+        height: 8px;            
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba($color: $plomo, $alpha: .7);
+        border-radius: 4px;
+    }
+}
+
+.footer{
+    padding: 3rem;
+    color: $color-primario;
+    h1{
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    > div{
+        ul{
+            border-left: 1px solid $gris;
+            list-style: none;
+            padding: 0 1em;
+            margin-left: 1em;
+            a{
+                display: block;
+                padding: .5em 0;
+                font-size: .8em;
+                color: $plomo;
+            }
+        }
+    }
+    .col-12 > a{
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        background: $color-primario;
+        color: $blanco;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2.3;
+    }
+}

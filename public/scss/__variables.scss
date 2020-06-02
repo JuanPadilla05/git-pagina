@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Poppins:300,400,500,600,700|Roboto+Condensed:300,400,700&display=swap');
+/*  Fuentes del Tema*/
+$poppins:'Poppins', sans-serif;
+$roboto:'Roboto Condensed', sans-serif;
+$noto-sans:'Noto Sans', sans-serif;
+
+/*  Colores del Tema  */
+$color-primario:#D01418;
+$color-secundario:rgb(8, 28, 53);
+
+/*  Colores del texto  */
+$color-texto-titulo:#222222;
+$color-texto-principal:#666666;
+
+/*  Colores extras  */
+$blanco:#fff;
+$blanco-humo:rgb(248, 248, 248);
+$negro:#000;
+$gris : #ced4da;
+$plomo: #9b9999;
+$amarillo:#F6BA39;
+$rojo:#D01418;
+$celeste:#0098BD;
+$verde: #5da201;
+$gradiante-1:linear-gradient(35deg,#03a9f4,#f860f0);
+$gradiante-2:linear-gradient(128deg,#137df6,#93eaf0);
+$gradiante-3:linear-gradient(35deg,#03a9f4,#93eaf0);
+
+/* Configuraciones Generales */
+*{
+    font-family: $poppins;
+}
